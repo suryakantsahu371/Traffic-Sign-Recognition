@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traffic Sign Recognition</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+
+  <body>
+    <header class="top-nav">
+      <div class="nav-left">
+        <div class="logo-box">
+          <i class="fa-solid fa-traffic-light"></i>
+          <span>TrafficSigns</span>
+        </div>
+      </div>
+
+      <nav class="nav-right">
+        <a href="#hero">Home</a>
+        <a href="#cards-row">Features</a>
+        <a href="#why-section">Why this project?</a>
+      </nav>
+    </header>
+
+    <section id="hero" class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>Discover smart traffic sign recognition</h1>
+          <p>Upload or capture traffic signs using camera</p>
+
+          <div class="hero-search-box">
+            <div class="hero-search-main">
+              <i class="fa-solid fa-image"></i>
+              <span id="file-name-text">Choose or capture image...</span>
+            </div>
+
+            <div class="hero-search-actions">
+              <button id="choose-image-btn" class="btn-primary">Upload</button>
+              <button id="open-camera-btn" class="btn-primary">Camera</button>
+              <button id="capture-btn" class="btn-secondary" style="display: none">Capture</button>
+              <button id="predict-btn" class="btn-secondary">Predict</button>
+            </div>
+          </div>
+
+          <div class="camera-preview-wrapper">
+            <video id="camera-stream" autoplay></video>
+
+            <div class="preview-box">
+              <img id="preview-image" />
+              <span id="no-image-text">No image selected</span>
+            </div>
+          </div>
+
+          <input type="file" id="image-input" accept="image/*" style="display: none" />
+
+          <div class="prediction-panel">
+            <div>
+              <h3>Prediction</h3>
+              <p id="predicted-class">–</p>
+
+              <div class="prob-row">
+                CNN
+                <div class="prob-bar"><div id="prob-cnn"></div></div>
+                <span id="prob-cnn-text">0%</span>
+              </div>
+
+              <div class="prob-row">
+                RNN
+                <div class="prob-bar"><div id="prob-rnn"></div></div>
+                <span id="prob-rnn-text">0%</span>
+              </div>
+
+              <div class="prob-row">
+                LSTM
+                <div class="prob-bar"><div id="prob-lstm"></div></div>
+                <span id="prob-lstm-text">0%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cards-row" class="cards-row">
+      <article class="feature-card">
+        <div class="card-img-wrap">
+          <img src="data:image/jpeg;base64,..." class="card-img" />
+        </div>
+        <div class="card-body">
+          <h3>Upload & Predict</h3>
+          <p>Upload any traffic sign image and view prediction.</p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <div class="card-img-wrap">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3_RzHLHXR_7BzWc8IGGnST3dnWxI-N-FXrw&s"
+            class="card-img"
+          />
+        </div>
+        <div class="card-body">
+          <h3>Deep Learning Models</h3>
+          <p>Compare CNN, RNN and LSTM architectures.</p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <div class="card-img-wrap">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_GNURJIFX2oJPVquhrI28lDDc02JQ764Ri8072d5-GgmJ5wXfViZfWJaN-UAe9_DaWhU&usqp=CAU"
+            class="card-img"
+          />
+        </div>
+        <div class="card-body">
+          <h3>Metrics & Insights</h3>
+          <p>Analyze accuracy and confusion matrix.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="why-section" class="why-section">
+      <h2>Why this project?</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <i class="fa-solid fa-road"></i>
+          <h4>Real-world application</h4>
+          <p>Supports autonomous driving systems.</p>
+        </div>
+
+        <div class="why-item">
+          <i class="fa-solid fa-microchip"></i>
+          <h4>Deep learning stack</h4>
+          <p>Built using CNN, RNN and LSTM.</p>
+        </div>
+
+        <div class="why-item">
+          <i class="fa-solid fa-chart-line"></i>
+          <h4>Strong evaluation</h4>
+          <p>Includes accuracy and reports.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 Traffic Sign Recognition Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
